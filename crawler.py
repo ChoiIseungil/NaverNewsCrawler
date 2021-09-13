@@ -95,16 +95,16 @@ def crawler(maxpage,query,sort,s_date,e_date):
 #메인함수
 def main():
     # info_main = input("="*50+"\n"+"입력 형식에 맞게 입력해주세요."+"\n"+" 시작하시려면 Enter를 눌러주세요."+"\n"+"="*50)
-    # maxpage = input("최대 크롤링할 페이지 수 입력하시오: ") #10,20...
-    # query = input("검색어 입력: ") #네이버, 부동산...
+    maxpage = input("최대 크롤링할 페이지 수 입력하시오: ") #10,20...
+    query = input("검색어 입력: ") #네이버, 부동산...
     # sort = input("뉴스 검색 방식 입력(관련도순=0  최신순=1  오래된순=2): ")    #관련도순=0  최신순=1  오래된순=2
-    # s_date = input("시작날짜 입력(2019.01.04):")  #2019.01.04
+    s_date = input("시작날짜 입력(2019.01.04):")  #2019.01.04
     # e_date = input("끝날짜 입력(2019.01.05):")   #2019.01.05
 
-    maxpage = "50000"
-    query = "황사"
+    # maxpage = "12000"
+    # query = "강풍"
     sort = "2"
-    s_date = "2015.01.01"
+    # s_date = "2009.04.28"
     e_date = "2021.09.13"
     print("Crawling Start")
     print(query, s_date, e_date)
