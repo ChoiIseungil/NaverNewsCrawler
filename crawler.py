@@ -25,8 +25,8 @@ date_text=[]
 contents_text=[]
 result={}
 
-headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" }
-# headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15"}
+# headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" }
+headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"}
 #엑셀로 저장하기 위한 변수
 RESULT_PATH ='/Users/ChoiIseungil-ilb/Desktop/KAIST/2021 Fall/CS474 텍스트마이닝/Homeworks/results/'  #결과 저장할 경로
 
@@ -55,7 +55,7 @@ def crawler(maxpage,query,sort,s_date,e_date):
         url = "https://search.naver.com/search.naver?where=news&query=" + query + "&sort="+sort+"&ds=" + s_date + "&de=" + e_date + "&nso=so%3Ar%2Cp%3Afrom" + s_from + "to" + e_to + "%2Ca%3A&start=" + str(page)
         response = requests.get(url,headers= headers,verify=False)
         # time.sleep(5)
-        assert (response.status_code == 200)
+        # assert (response.status_code == 200)
 
         html = response.text
 
@@ -101,10 +101,10 @@ def main():
     s_date = input("시작날짜 입력(2019.01.04):")  #2019.01.04
     # e_date = input("끝날짜 입력(2019.01.05):")   #2019.01.05
 
-    # maxpage = "12000"
-    # query = "강풍"
+    # maxpage = "5000"
+    # query = "한파"
     sort = "2"
-    # s_date = "2009.04.28"
+    # s_date = "2008.12.07"
     e_date = "2021.09.13"
     print("Crawling Start")
     print(query, s_date, e_date)
